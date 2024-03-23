@@ -1,0 +1,5 @@
+/.pylintrc
+/.venv
+/.vscode
+/pylint.rc
+**/__pycache__
