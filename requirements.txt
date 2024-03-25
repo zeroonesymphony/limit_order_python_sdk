@@ -1,0 +1,2 @@
+aiohttp
+starknet_py

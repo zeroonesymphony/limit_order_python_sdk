@@ -22,6 +22,10 @@ source .venv/bin/activate
 
 **Install Required Packages:**
 ```bash
+pip install -r requirements.txt
+```
+or
+```bash
 pip install aiohttp
 pip install starknet_py
 ```
