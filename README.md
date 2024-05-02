@@ -6,23 +6,13 @@
 
 # Fibrous Finance Limit Order SDK (v0.1.3)
 
-The Fibrous Finance Limit Order SDK is a JavaScript library that provides tools and functionalities for interacting with the Fibrous Finance Limit Order protocol. It allows developers to programmatically access and utilize various features of the protocol, such as retrieving orders, placing orders, canceling orders, and more.
+The Fibrous Finance Limit Order SDK is a Python library that provides tools and functionalities for interacting with the Fibrous Finance Limit Order protocol. It allows developers to programmatically access and utilize various features of the protocol, such as retrieving orders, placing orders, canceling orders, and more.
 
-## Table of Contents
-
--  [Installation](#installation)
--  [Usage](https://github.com/Fibrous-Finance/limit-order-sdk/blob/main/examples/readme.md)
-   -  [getOrders](https://github.com/Fibrous-Finance/limit-order-sdk/blob/main/examples/src/getOrders.ts)
-   -  [getNonce](https://github.com/Fibrous-Finance/limit-order-sdk/blob/main/examples/src/getNonce.ts)
-   -  [getRemainingAmount](https://github.com/Fibrous-Finance/limit-order-sdk/blob/main/examples/src/getRemainingAmount.ts)
-   -  [signMessage](https://github.com/Fibrous-Finance/limit-order-sdk/blob/main/examples/src/signMessage.ts)
-   -  [placeOrder](https://github.com/Fibrous-Finance/limit-order-sdk/blob/main/examples/src/placeOrder.ts)
-   -  [fillOrder](https://github.com/Fibrous-Finance/limit-order-sdk/blob/main/examples/src/fillOrder.ts)
 
 ## Installation
 
 ```bash
-
+pip install fibrous_limit_order
 ```
 
 ## Documentation
