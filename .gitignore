@@ -3,3 +3,4 @@
 /.vscode
 /pylint.rc
 **/__pycache__
+/dist

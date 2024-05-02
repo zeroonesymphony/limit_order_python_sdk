@@ -4,9 +4,8 @@ sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 import asyncio
 import timeit
-from limit_order.limit_order import LimitOrder
-from limit_order.personal_data import WALLET_ADDRESS
-from return_types.orders import NonceResponse
+from fibrous_limit_order import *
+
 
 async def get_nonce() -> NonceResponse:
     limit_order = LimitOrder()

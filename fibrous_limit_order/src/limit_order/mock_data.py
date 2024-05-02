@@ -1,5 +1,5 @@
 from datetime import datetime, timedelta
-from return_types.orders import Order
+from fibrous_limit_order.src.limit_order.order_types import Order
 
 def convert_date_to_unix_timestamp(days):
     return int((datetime.now() + timedelta(days=days)).timestamp())

@@ -1,7 +1,7 @@
 from starknet_py.utils.typed_data import TypedData
 from starknet_py.net.models.typed_data import StarkNetDomain
 from .types import SignOrder, types
-from return_types.orders import Order, SignMessageResponse
+from fibrous_limit_order.src.limit_order.order_types import Order, SignMessageResponse
 
 CHAINID = '0x534e5f474f45524c49'
 

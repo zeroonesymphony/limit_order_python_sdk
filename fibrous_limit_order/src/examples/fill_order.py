@@ -3,7 +3,7 @@ import os
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 import asyncio
-from limit_order.limit_order import LimitOrder
+from fibrous_limit_order import *
 
 async def fill_order(orderHash, fill_amount=None):
     limit_order = LimitOrder()

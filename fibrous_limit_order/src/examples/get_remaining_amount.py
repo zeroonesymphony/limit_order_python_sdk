@@ -3,8 +3,8 @@ import os
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 import asyncio
-from limit_order.limit_order import LimitOrder
-from limit_order.mock_data import RPC_URL
+from fibrous_limit_order import *
+
 
 async def get_remaining_amount(orderHash):
     limit_order = LimitOrder(RPC_URL)

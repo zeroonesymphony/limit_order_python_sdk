@@ -6,8 +6,8 @@ from starknet_py.net.full_node_client import FullNodeClient
 from starknet_py.serialization._context import SerializationContext
 from starknet_py.serialization.data_serializers import Uint256Serializer
 from .constants import LIMIT_ORDER_API_URL, LIMIT_ORDER_CONTRACT_ADDRESS
-from return_types.orders import Order, GetOrdersResponse, OrdersFilter, NonceResponse, SignMessageResponse, PlaceOrderResponse
-from limit_order.sign_message import sign_message
+from fibrous_limit_order.src.limit_order.order_types import Order, GetOrdersResponse, OrdersFilter, NonceResponse, SignMessageResponse, PlaceOrderResponse
+from fibrous_limit_order.src.limit_order.message_sign import sign_message
 
 class LimitOrder:
     _DEFAULT_API_URL = LIMIT_ORDER_API_URL

@@ -3,10 +3,8 @@ import os
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 import asyncio
-from limit_order.limit_order import LimitOrder
-from return_types.orders import SignMessageResponse
-from limit_order.mock_data import mock_order, RPC_URL, ACCOUNT_PRIVATE_KEY, ACCOUNT_PUBLIC_KEY
-from limit_order.accounts import account
+from fibrous_limit_order import *
+
 
 async def full_place_order():
     limit_order = LimitOrder(RPC_URL)
