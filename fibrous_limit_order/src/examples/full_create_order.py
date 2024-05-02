@@ -1,8 +1,12 @@
+import sys
+import os
+sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+
 import asyncio
-from utils.limit_order import LimitOrder
+from limit_order.limit_order import LimitOrder
 from return_types.orders import SignMessageResponse
-from utils.mock_data import mock_order, RPC_URL, ACCOUNT_PRIVATE_KEY, ACCOUNT_PUBLIC_KEY
-from utils.accounts import account
+from limit_order.mock_data import mock_order, RPC_URL, ACCOUNT_PRIVATE_KEY, ACCOUNT_PUBLIC_KEY
+from limit_order.accounts import account
 
 async def full_place_order():
     limit_order = LimitOrder(RPC_URL)
@@ -26,7 +30,7 @@ async def full_place_order():
     print(f'approve_call_data: {approve_call_data}')
     print(f'mock_order: {mock_order}')
     print(f'place_order_resp: {place_order_resp}')
-    print(f'status: {place_order_resp['status']} code {place_order_resp['code']}')
+    print(f'status: {place_order_resp["status"]} code {place_order_resp["code"]}')
 
 def main():
     asyncio.run(full_place_order())

@@ -1,8 +1,13 @@
+import sys
+import os
+sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+
 import asyncio
 import aiohttp
-from utils.limit_order import LimitOrder
+
+from limit_order.limit_order import LimitOrder
 from return_types.orders import GetOrdersResponse, OrdersFilter
-from utils import utils
+from limit_order import utils
 
 async def get_orders() -> GetOrdersResponse:
     limit_order = LimitOrder()

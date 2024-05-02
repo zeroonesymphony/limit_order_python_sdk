@@ -1,7 +1,11 @@
+import sys
+import os
+sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+
 import asyncio
-import utils.limit_order as _limit_order
+import limit_order.limit_order as _limit_order
 from return_types.orders import SignMessageResponse
-from utils.mock_data import mock_order, RPC_URL
+from limit_order.mock_data import mock_order, RPC_URL
 
 async def sign_message(_mock_order) -> SignMessageResponse:
     limit_order = _limit_order.LimitOrder(RPC_URL)

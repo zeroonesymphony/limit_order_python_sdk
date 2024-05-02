@@ -1,9 +1,13 @@
+import sys
+import os
+sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+
 import asyncio
 import aiohttp
-from utils.limit_order import LimitOrder
-from utils.mock_data import RPC_URL, ACCOUNT_PRIVATE_KEY, ACCOUNT_PUBLIC_KEY
-from utils import utils
-from utils.accounts import account
+from limit_order.limit_order import LimitOrder
+from limit_order.mock_data import RPC_URL, ACCOUNT_PRIVATE_KEY, ACCOUNT_PUBLIC_KEY
+from limit_order import utils
+from limit_order.accounts import account
 
 async def full_fill_order():
     limit_order = LimitOrder(RPC_URL)

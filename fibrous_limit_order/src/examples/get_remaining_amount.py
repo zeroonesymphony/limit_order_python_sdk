@@ -1,6 +1,10 @@
+import sys
+import os
+sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+
 import asyncio
-from utils.limit_order import LimitOrder
-from utils.mock_data import RPC_URL
+from limit_order.limit_order import LimitOrder
+from limit_order.mock_data import RPC_URL
 
 async def get_remaining_amount(orderHash):
     limit_order = LimitOrder(RPC_URL)

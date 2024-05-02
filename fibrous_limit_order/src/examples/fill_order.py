@@ -1,5 +1,9 @@
+import sys
+import os
+sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+
 import asyncio
-from utils.limit_order import LimitOrder
+from limit_order.limit_order import LimitOrder
 
 async def fill_order(orderHash, fill_amount=None):
     limit_order = LimitOrder()

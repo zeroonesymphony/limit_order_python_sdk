@@ -1,7 +1,11 @@
+import sys
+import os
+sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+
 import asyncio
 import timeit
-from utils.limit_order import LimitOrder
-from utils.personal_data import WALLET_ADDRESS
+from limit_order.limit_order import LimitOrder
+from limit_order.personal_data import WALLET_ADDRESS
 from return_types.orders import NonceResponse
 
 async def get_nonce() -> NonceResponse:

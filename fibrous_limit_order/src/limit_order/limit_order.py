@@ -7,7 +7,7 @@ from starknet_py.serialization._context import SerializationContext
 from starknet_py.serialization.data_serializers import Uint256Serializer
 from .constants import LIMIT_ORDER_API_URL, LIMIT_ORDER_CONTRACT_ADDRESS
 from return_types.orders import Order, GetOrdersResponse, OrdersFilter, NonceResponse, SignMessageResponse, PlaceOrderResponse
-from utils.sign_message import sign_message
+from limit_order.sign_message import sign_message
 
 class LimitOrder:
     _DEFAULT_API_URL = LIMIT_ORDER_API_URL
@@ -68,12 +68,14 @@ class LimitOrder:
     async def sign_message(self, order: Order) -> SignMessageResponse:
     
         nonce_response = await self.get_nonce(order.signer)
+
         nonce = nonce_response['data'] + 1
         signed_message = sign_message(order, nonce)
         return signed_message
 
     async def place_order(self, order: Order) -> PlaceOrderResponse:
         data = json.dumps(vars(order))
+        print(data)
         headers = {'Content-Type': 'application/json'}
         url = f"{self.api_url}/placeOrder"
         async with aiohttp.ClientSession() as session:
