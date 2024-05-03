@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name='fibrous-limit-order-python-sdk',
-    version='0.1.0',  
+    version='1.0.0',  
     author='zeroonesymphony', 
     author_email='kermo@fibrous.finance',
     description='A Python SDK for Fibrous Finance Limit Order',  
@@ -11,8 +11,8 @@ setup(
     url='https://github.com/Fibrous-Finance/limit-order-python-sdk', 
     packages=find_packages(),  
     install_requires=[
-        # 'aiohttp>= 3.9.3',
-        # 'starknet_py>=0.21.0',
+        'aiohttp>= 3.9.3',
+        'starknet_py>=0.21.0',
     ],
     classifiers=[
         'Programming Language :: Python :: 3',

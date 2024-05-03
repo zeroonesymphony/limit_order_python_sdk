@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "fibrous_limit_order"
-version = "0.1.0"
+version = "1.0.0"
 description = "A Python SDK for Fibrous Finance Limit Order"
 authors = ["zeroonesymphony <kermo@fibrous.finance>"]
 license = "MIT"
